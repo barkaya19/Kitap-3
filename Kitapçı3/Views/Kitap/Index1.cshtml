@@ -1,0 +1,43 @@
+﻿@using Kitapçı3.Models
+@model List<Kitap>
+@{
+    ViewData["Title"] = "Index1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="margin-left:400px;">En Çok Satan Kitaplar</h1>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Kitap Adı</th>
+        <th>Yazar</th>
+        <th>Yayınevi</th>
+        <th>Fiyat</th>
+        <th>İncele</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Kitapad</td>
+            <td>@x.Yazar</td>
+            <td>@x.Yayınevi</td>
+            <td>@x.Fiyat tl</td>
+            <td><a href="/Kitap/KitapGetir/@x.ID" class="btn btn-default" style="background-color:gray;">İncele</a></td>
+        </tr>
+    }
+
+</table>
+
+
+<br />
+<h1 style="margin-left:400px;">Kitap Kategorileri</h1>
+<br />
+<br />
+<div style="margin-left:370px;">
+    <a href="/Kitap/BilimSayfa/" class="btn btn-default" style="border-color:black; margin-right:40px;">Bilim</a>
+    <a href="/Kitap/FelsefeSayfa/" class="btn btn-default" style="border-color:black; margin-right:30px;">Felsefe</a>
+    <a href="/Kitap/PsikolojiSayfa/" class="btn btn-default" style="border-color:black; margin-right:30px;">Psikoloji</a>
+    <a href="/Kitap/RomanSayfa/" class="btn btn-default" style="border-color:black;">Roman</a>
+</div>
+<div style="margin-top:250px;"></div>
+<br />

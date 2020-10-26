@@ -1,0 +1,33 @@
+﻿@model Kitapçı3.Models.Kitap
+
+@{
+    ViewData["Title"] = "KitapGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<img src="https://listelist.com/wp-content/uploads/2014/11/kitaplar-1-620x375.jpg" style="margin-top:60px;" />
+
+@using (Html.BeginForm("KitapGetir", "Kitap", FormMethod.Post))
+{
+
+    <b>Kitap Adı</b>
+    @Html.TextBoxFor(x => x.Kitapad, new { @class = "form-control" })
+    <br />
+    <b> Yazar</b>
+    @Html.TextBoxFor(x => x.Yazar, new { @class = "form-control" })
+    <br />
+    <b> Yayınevi</b>
+    @Html.TextBoxFor(x => x.Yayınevi, new { @class = "form-control" })
+    <b>Fiyat</b>
+    @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
+}
+<br />
+<a href="#" class="btn btn-info"> Kitabı Satın Al</a>
+<div style="margin-top:80px;">
+
+</div>
+
+
+

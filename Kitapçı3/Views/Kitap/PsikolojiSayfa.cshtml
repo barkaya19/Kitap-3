@@ -1,0 +1,33 @@
+﻿@using Kitapçı3.Models
+@model List<Psikoloji>
+@{
+    ViewData["Title"] = "PsikolojiSayfa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="margin-left:350px;">Psikoloji Kitapları</h2>
+
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Kitap Adı</th>
+        <th>Yazar</th>
+        <th>Yayınevi</th>
+        <th>Fiyat</th>
+        <th>İncele</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Kitapad</td>
+            <td>@x.Yazar</td>
+            <td>@x.Yayınevi</td>
+            <td>@x.Fiyat tl</td>
+            <td><a href="/Kitap/PsikolojiGetir/@x.ID" class="btn btn-default" style="background-color:gray;">İncele</a></td>
+        </tr>
+    }
+
+</table>
+<br />
+

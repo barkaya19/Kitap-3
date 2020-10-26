@@ -1,0 +1,29 @@
+﻿@model Kitapçı3.Models.Felsefe
+@{
+    ViewData["Title"] = "FelsefeGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<img src="https://miro.medium.com/max/3840/1*zOTZ7SJPTd-5LLtJOTe0jw.jpeg" style="height:500px; width:1000px; margin-left:70px;" />
+<br />
+<br />
+@using (Html.BeginForm("FelsefeGetir", "Felsefe", FormMethod.Post))
+{
+    <br />
+    <b>Kitap Adı</b>
+    @Html.TextBoxFor(x => x.Kitapad, new { @class = "form-control" })
+    <br />
+    <b> Yazar</b>
+    @Html.TextBoxFor(x => x.Yazar, new { @class = "form-control" })
+    <br />
+    <b> Yayınevi</b>
+    @Html.TextBoxFor(x => x.Yayınevi, new { @class = "form-control" })
+    <br />
+    <b>Fiyat</b>
+    @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
+}
+<br />
+<a href="/Kitap/FlsKitapAl/" class="btn btn-info"> Kitabı Satın Al</a>
+<div style="margin-top:80px;">
+
+</div>

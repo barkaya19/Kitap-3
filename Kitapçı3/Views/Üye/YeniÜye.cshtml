@@ -1,0 +1,30 @@
+﻿@model Kitapçı3.Models.Üye
+@{
+    ViewData["Title"] = "YeniÜye";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<form class="form-group" method="post">
+
+    <b>Ad</b>
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+    <b>Soyad</b>
+    @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control" })
+    <br />
+    <b>E-Posta</b>
+    @Html.TextBoxFor(x => x.Eposta, new { @class = "form-control" })
+    <br />
+    <b>Şifre</b>
+    @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info" onclick="MesajGoster()">Üye Ol</button>
+</form>
+
+<script type="text/javascript">
+    function MesajGoster() {
+
+        alert("Kayıt Oldunuz");
+    }
+</script>
